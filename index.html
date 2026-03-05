@@ -3,71 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🇵🇸 تحدي إسلام شرطة الأنبو - 40 مرحلة</title>
+    <title>⚡ CYBER CHALLENGE - 40 ENCRYPTIONS</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* RESET & BASE */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            user-select: none !important;
             -webkit-user-select: none !important;
             -moz-user-select: none !important;
             -ms-user-select: none !important;
-            user-select: none !important;
-            -webkit-touch-callout: none !important;
-            -webkit-user-drag: none !important;
-            -khtml-user-drag: none !important;
-            -moz-user-drag: none !important;
-            -o-user-drag: none !important;
-            user-drag: none !important;
         }
 
-        /* منع النسخ بكل الطرق الممكنة */
+        /* CYBERPUNK DARK THEME - NO COLORS JUST CYAN & BLACK */
         body {
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            -webkit-touch-callout: none;
-            -webkit-user-drag: none;
-            -khtml-user-drag: none;
-            -moz-user-drag: none;
-            -o-user-drag: none;
-            user-drag: none;
-            font-family: 'Tajawal', sans-serif;
-            background: #0a0a0f;
+            background: #030303;
+            font-family: 'Courier New', monospace;
+            color: #00ff9d;
             min-height: 100vh;
-            color: white;
-            overflow-x: hidden;
+            position: relative;
+            line-height: 1.4;
         }
 
-        /* طبقة حماية إضافية */
-        #protector-layer {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: transparent;
-            z-index: 999999;
-            pointer-events: none;
-        }
-
-        /* منع التحديد حتى في النصوص المسموحة */
-        .challenge-text, .riddle-question {
-            -webkit-user-select: text !important;
-            -moz-user-select: text !important;
-            -ms-user-select: text !important;
-            user-select: text !important;
-            pointer-events: auto !important;
-        }
-
-        @font-face {
-            font-family: 'Tajawal';
-            src: url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap');
-        }
-
-        /* الخلفية المتحركة - محسنة للسرعة */
+        /* Matrix Background Effect */
         body::before {
             content: '';
             position: fixed;
@@ -75,340 +35,261 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 30% 50%, rgba(255, 215, 0, 0.05) 0%, transparent 60%);
-            z-index: -1;
-            animation: bgMove 15s ease infinite;
+            background: repeating-linear-gradient(0deg, rgba(0, 255, 157, 0.03) 0px, rgba(0, 0, 0, 1) 2px, transparent 3px);
+            pointer-events: none;
+            z-index: 0;
+            animation: scan 8s linear infinite;
         }
 
-        @keyframes bgMove {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.2); opacity: 0.8; }
+        @keyframes scan {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(100%); }
         }
 
         .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px;
             position: relative;
-            z-index: 2;
+            z-index: 1;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 10px;
         }
 
-        /* الهيدر الفخم */
+        /* HEADER - MINIMAL CYBER */
         .header {
-            background: linear-gradient(135deg, rgba(26, 26, 46, 0.95), rgba(10, 10, 20, 0.98));
-            border: 3px solid #ffd700;
-            border-radius: 40px;
-            padding: 30px;
-            margin-bottom: 30px;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
-            backdrop-filter: blur(10px);
+            border: 1px solid #00ff9d;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: rgba(0, 255, 157, 0.02);
             position: relative;
             overflow: hidden;
         }
 
-        .header::before {
-            content: '🇵🇸';
+        .header::after {
+            content: 'SYSTEM.v1 // ISLAM SHURTA AL-ANBO';
             position: absolute;
-            top: -20px;
-            right: -20px;
-            font-size: 150px;
-            opacity: 0.1;
-            transform: rotate(15deg);
+            bottom: 2px;
+            right: 5px;
+            font-size: 10px;
+            color: #00ff9d;
+            opacity: 0.3;
         }
 
         h1 {
-            font-size: 4em;
-            font-weight: 900;
-            background: linear-gradient(45deg, #ffd700, #ff4444, #ffd700);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
-            margin-bottom: 10px;
-            position: relative;
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #00ff9d;
+            text-shadow: 0 0 5px #00ff9d;
         }
 
         .subtitle {
-            color: #aaa;
-            font-size: 1.5em;
-            border-bottom: 2px solid #ffd700;
-            display: inline-block;
-            padding-bottom: 10px;
+            font-size: 11px;
+            color: #00ff9d;
+            opacity: 0.7;
+            letter-spacing: 1px;
         }
 
-        /* شريط التقدم السريع */
+        /* PROGRESS - TERMINAL STYLE */
         .progress-section {
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 60px;
-            padding: 20px;
-            margin-bottom: 30px;
-            border: 2px solid rgba(255, 215, 0, 0.3);
+            border: 1px solid #00ff9d;
+            padding: 10px;
+            margin-bottom: 15px;
+            background: rgba(0, 255, 157, 0.02);
         }
 
         .progress-stats {
             display: flex;
             justify-content: space-between;
-            font-size: 1.3em;
-            margin-bottom: 15px;
-            color: #ffd700;
+            font-size: 12px;
+            margin-bottom: 8px;
+            font-family: 'Courier New', monospace;
         }
 
         .progress-bar {
-            height: 30px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            overflow: hidden;
+            height: 15px;
+            border: 1px solid #00ff9d;
+            background: transparent;
             position: relative;
         }
 
         .progress-fill {
             height: 100%;
-            background: linear-gradient(90deg, #ffd700, #ff6b6b);
+            background: #00ff9d;
             width: 0%;
-            transition: width 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            transition: width 0.2s;
+            box-shadow: 0 0 5px #00ff9d;
         }
 
-        .progress-fill::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            animation: shimmer 1.5s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-
-        /* لوحة المعلومات */
+        /* INFO PANEL */
         .info-panel {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(255, 215, 0, 0.05);
-            border: 2px solid #ffd700;
-            border-radius: 60px;
-            padding: 15px 30px;
-            margin-bottom: 40px;
-            font-size: 1.8em;
-            font-weight: bold;
+            border: 1px solid #00ff9d;
+            padding: 10px 15px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            background: rgba(0, 255, 157, 0.02);
         }
 
         .timer {
-            color: #ffd700;
-            text-shadow: 0 0 15px #ffd700;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 2px;
         }
 
         .leaderboard-btn {
-            background: transparent;
-            border: 3px solid #ffd700;
-            color: #ffd700;
-            padding: 10px 30px;
-            border-radius: 40px;
-            font-size: 1.2em;
+            border: 1px solid #00ff9d;
+            padding: 5px 15px;
             cursor: pointer;
-            transition: 0.3s;
-            font-weight: bold;
+            background: transparent;
+            color: #00ff9d;
+            font-size: 12px;
+            transition: 0.2s;
+            font-family: 'Courier New', monospace;
         }
 
         .leaderboard-btn:hover {
-            background: #ffd700;
-            color: #0a0a0f;
-            box-shadow: 0 0 30px #ffd700;
+            background: #00ff9d;
+            color: #000;
         }
 
-        /* شبكة التحديات - سرعة عالية */
+        /* GRIDS - COMPACT */
         .challenges-grid, .riddles-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 10px;
+            margin-bottom: 15px;
         }
 
-        /* كارد التحدي */
+        /* CHALLENGE CARD - NO COLORS, ONLY CYAN */
         .challenge-card, .riddle-card {
-            background: linear-gradient(145deg, rgba(20, 20, 35, 0.95), rgba(10, 10, 20, 0.98));
-            border: 2px solid rgba(255, 215, 0, 0.3);
-            border-radius: 30px;
-            padding: 25px;
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #00ff9d;
+            background: rgba(0, 255, 157, 0.02);
+            padding: 12px;
+            transition: 0.2s;
             position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(5px);
         }
 
-        .challenge-card:hover {
-            transform: translateY(-5px) scale(1.02);
-            border-color: #ffd700;
-            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.3);
-        }
-
-        .challenge-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #ffd700, #ff4444);
-            transform: translateX(-100%);
-            transition: transform 0.4s;
-        }
-
-        .challenge-card:hover::before {
-            transform: translateX(100%);
+        .challenge-card:hover, .riddle-card:hover {
+            background: rgba(0, 255, 157, 0.05);
+            box-shadow: 0 0 10px rgba(0, 255, 157, 0.2);
         }
 
         .card-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(0, 255, 157, 0.3);
+            padding-bottom: 5px;
         }
 
         .card-number {
-            background: #ffd700;
-            color: #0a0a0f;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 900;
-            font-size: 1.5em;
-            box-shadow: 0 0 20px #ffd700;
+            font-size: 12px;
+            color: #00ff9d;
+            opacity: 0.8;
         }
 
         .card-status {
-            font-size: 2em;
+            font-size: 14px;
         }
 
         .card-status.completed {
-            color: #00ff00;
-            filter: drop-shadow(0 0 10px #00ff00);
+            color: #00ff9d;
         }
 
         .card-title {
-            font-size: 1.5em;
-            color: #ffd700;
-            margin-bottom: 15px;
-            font-weight: 700;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
+        /* CHALLENGE TEXT - SMALL */
         .challenge-text {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 15px;
             font-family: 'Courier New', monospace;
-            font-size: 1.2em;
+            font-size: 11px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #00ff9d;
+            padding: 8px;
+            margin: 8px 0;
             direction: ltr;
             text-align: left;
-            border: 2px solid #ffd700;
-            margin: 20px 0;
             word-break: break-all;
-            color: #00ff00;
-            text-shadow: 0 0 5px #00ff00;
-            pointer-events: auto !important;
-            -webkit-user-select: text !important;
+            color: #00ff9d;
+            line-height: 1.3;
+            max-height: 80px;
+            overflow-y: auto;
             user-select: text !important;
+            -webkit-user-select: text !important;
         }
 
-        /* حقول الإدخال - سريعة الاستجابة */
+        /* RIDDLE QUESTION - SMALL */
+        .riddle-question {
+            font-size: 12px;
+            margin: 10px 0;
+            min-height: 50px;
+            border: 1px solid rgba(0, 255, 157, 0.3);
+            padding: 8px;
+            background: rgba(0, 0, 0, 0.5);
+            user-select: text !important;
+            -webkit-user-select: text !important;
+        }
+
+        /* INPUT FIELDS - MINIMAL */
         .challenge-input, .riddle-input {
             width: 100%;
-            padding: 15px;
-            background: rgba(0, 0, 0, 0.5);
-            border: 3px solid #ffd700;
-            border-radius: 15px;
-            color: white;
-            font-size: 1.1em;
-            margin: 15px 0;
-            transition: all 0.2s;
-            pointer-events: auto !important;
-            -webkit-user-select: text !important;
+            padding: 8px;
+            background: transparent;
+            border: 1px solid #00ff9d;
+            color: #00ff9d;
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            margin: 5px 0;
+            outline: none;
             user-select: text !important;
+            -webkit-user-select: text !important;
         }
 
         .challenge-input:focus, .riddle-input:focus {
-            outline: none;
-            border-color: #ff4444;
-            box-shadow: 0 0 25px #ffd700;
-            transform: scale(1.02);
+            background: rgba(0, 255, 157, 0.05);
+            box-shadow: 0 0 5px #00ff9d;
         }
 
-        /* الأزرار - سريعة الاستجابة */
-        .challenge-btn, .riddle-btn {
+        /* BUTTONS - TERMINAL STYLE */
+        .challenge-btn, .riddle-btn, .hint-btn {
             width: 100%;
-            padding: 18px;
-            background: linear-gradient(45deg, #ffd700, #ff6b6b);
-            border: none;
-            border-radius: 15px;
-            color: #0a0a0f;
-            font-weight: 900;
-            font-size: 1.3em;
-            cursor: pointer;
-            transition: all 0.15s;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .challenge-btn:hover, .riddle-btn:hover {
-            transform: scale(1.03);
-            box-shadow: 0 0 35px #ffd700;
-        }
-
-        .challenge-btn:active, .riddle-btn:active {
-            transform: scale(0.98);
-        }
-
-        .challenge-btn::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 300px;
-            height: 300px;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            transform: translate(-50%, -50%) scale(0);
-            transition: transform 0.5s;
-        }
-
-        .challenge-btn:active::after {
-            transform: translate(-50%, -50%) scale(1);
-            opacity: 0;
-            transition: 0s;
-        }
-
-        .hint-btn {
-            width: 100%;
-            padding: 12px;
+            padding: 8px;
             background: transparent;
-            border: 3px solid #ffd700;
-            border-radius: 15px;
-            color: #ffd700;
-            font-weight: bold;
-            font-size: 1.1em;
+            border: 1px solid #00ff9d;
+            color: #00ff9d;
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
             cursor: pointer;
-            transition: 0.2s;
-            margin-top: 10px;
+            transition: 0.15s;
+            margin: 3px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .hint-btn:hover {
-            background: #ffd700;
-            color: #0a0a0f;
+        .challenge-btn:hover, .riddle-btn:hover, .hint-btn:hover {
+            background: #00ff9d;
+            color: #000;
         }
 
-        /* النوافذ المنبثقة */
+        .challenge-btn:disabled, .riddle-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .challenge-btn:disabled:hover {
+            background: transparent;
+            color: #00ff9d;
+        }
+
+        /* MODALS - CYBER */
         .modal {
             display: none;
             position: fixed;
@@ -416,173 +297,160 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.98);
-            backdrop-filter: blur(20px);
+            background: rgba(0, 0, 0, 0.95);
             z-index: 10000;
             align-items: center;
             justify-content: center;
+            border: 1px solid #00ff9d;
         }
 
         .modal-content {
-            background: linear-gradient(145deg, #1a1a2e, #0a0a1a);
-            border: 4px solid #ffd700;
-            border-radius: 50px;
-            padding: 50px;
-            max-width: 600px;
+            background: #030303;
+            border: 2px solid #00ff9d;
+            padding: 25px;
+            max-width: 500px;
             width: 90%;
-            position: relative;
-            animation: modalIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 30px 60px rgba(255, 215, 0, 0.3);
+            box-shadow: 0 0 30px rgba(0, 255, 157, 0.3);
         }
 
-        @keyframes modalIn {
-            from {
-                opacity: 0;
-                transform: scale(0.7) rotate(-5deg);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1) rotate(0);
-            }
+        .close {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            color: #00ff9d;
+            font-size: 20px;
+            cursor: pointer;
         }
 
-        /* نافذة التسجيل */
+        /* REGISTER MODAL */
         .register-modal {
             display: flex;
         }
 
         .input-group {
-            margin: 25px 0;
-            position: relative;
-        }
-
-        .input-group i {
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #ffd700;
-            font-size: 1.3em;
+            margin: 15px 0;
         }
 
         .input-group input {
             width: 100%;
-            padding: 18px 50px 18px 18px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 3px solid #ffd700;
-            border-radius: 40px;
-            color: white;
-            font-size: 1.2em;
-            pointer-events: auto;
-            -webkit-user-select: text;
-            user-select: text;
+            padding: 12px;
+            background: transparent;
+            border: 1px solid #00ff9d;
+            color: #00ff9d;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            user-select: text !important;
+            -webkit-user-select: text !important;
         }
 
         .btn-primary {
-            padding: 18px 50px;
-            background: linear-gradient(45deg, #ffd700, #ff4444);
-            border: none;
-            border-radius: 40px;
-            color: #0a0a0f;
-            font-weight: 900;
-            font-size: 1.4em;
+            width: 100%;
+            padding: 12px;
+            background: transparent;
+            border: 2px solid #00ff9d;
+            color: #00ff9d;
+            font-size: 14px;
             cursor: pointer;
             transition: 0.2s;
-            width: 100%;
+            font-weight: bold;
+            text-transform: uppercase;
         }
 
         .btn-primary:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 40px #ffd700;
+            background: #00ff9d;
+            color: #000;
         }
 
-        /* نافذة الفائز */
+        /* WINNER MODAL */
         .winner-content {
             text-align: center;
-            background: linear-gradient(135deg, #ffd700, #ff4444);
-            animation: winnerPop 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        @keyframes winnerPop {
-            0% { transform: scale(0) rotate(0deg); }
-            70% { transform: scale(1.2) rotate(5deg); }
-            100% { transform: scale(1) rotate(0); }
+            border-color: #00ff9d;
         }
 
         .winner-crown {
-            font-size: 6em;
-            animation: crownFloat 1s infinite alternate;
+            font-size: 40px;
+            margin: 20px 0;
+            animation: pulse 1s infinite;
         }
 
-        @keyframes crownFloat {
-            from { transform: translateY(0); }
-            to { transform: translateY(-20px); }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
         }
 
-        /* طبقة منع النسخ الإضافية */
-        .anti-cheat-layer {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: transparent;
-            z-index: 999998;
-            pointer-events: none;
+        /* LEADERBOARD */
+        #leaderboard-list div {
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid rgba(0, 255, 157, 0.3);
+            font-size: 12px;
         }
 
+        /* ANTI-CHEAT NOTICE */
         .anti-cheat-notice {
             position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(255, 0, 0, 0.3);
-            border: 2px solid #ff4444;
-            border-radius: 30px;
-            padding: 10px 20px;
-            color: white;
-            font-weight: bold;
-            z-index: 1000000;
-            pointer-events: none;
-            backdrop-filter: blur(5px);
+            bottom: 5px;
+            left: 5px;
+            font-size: 9px;
+            color: #00ff9d;
+            opacity: 0.5;
+            z-index: 9999;
+            letter-spacing: 0.5px;
         }
 
-        /* تذييل الحقوق */
         .footer {
             text-align: center;
-            padding: 30px;
-            margin-top: 50px;
-            border-top: 2px solid #ffd700;
-            color: #ffd700;
-            font-weight: bold;
-            font-size: 1.2em;
+            padding: 15px;
+            font-size: 10px;
+            border-top: 1px solid rgba(0, 255, 157, 0.3);
+            margin-top: 20px;
+            color: #00ff9d;
+            opacity: 0.7;
         }
 
-        /* تحسينات سرعة */
-        * {
-            -webkit-tap-highlight-color: transparent;
+        /* SCROLLBAR - CYBER */
+        ::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
         }
 
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #00ff9d;
+        }
+
+        /* UTILS */
         .hidden {
             display: none;
+        }
+
+        /* TEXT SELECTION OVERRIDE FOR CHALLENGE TEXTS */
+        .challenge-text::-moz-selection, .riddle-question::-moz-selection {
+            background: #00ff9d;
+            color: #000;
+        }
+
+        .challenge-text::selection, .riddle-question::selection {
+            background: #00ff9d;
+            color: #000;
         }
     </style>
 </head>
 <body>
-    <!-- طبقات حماية متعددة -->
-    <div class="anti-cheat-layer"></div>
-    <div id="protector-layer"></div>
-
     <div class="container">
-        <!-- الهيدر -->
+        <!-- HEADER -->
         <div class="header">
-            <h1>🇵🇸 إسلام شرطة الأنبو</h1>
-            <div class="subtitle">التحدي الأقوى - 40 مرحلة</div>
+            <h1>⚡ CYBER CHALLENGE ⚡</h1>
+            <div class="subtitle">ISLAM SHURTA AL-ANBO // 40 ENCRYPTIONS</div>
         </div>
 
-        <!-- شريط التقدم -->
+        <!-- PROGRESS -->
         <div class="progress-section">
             <div class="progress-stats">
-                <span>تم حل <span id="completed-count">0</span>/40</span>
+                <span>[<span id="completed-count">0</span>/40]</span>
                 <span id="progress-percent">0%</span>
             </div>
             <div class="progress-bar">
@@ -590,146 +458,90 @@
             </div>
         </div>
 
-        <!-- لوحة المعلومات -->
+        <!-- INFO -->
         <div class="info-panel">
-            <div class="timer">
-                <i class="fas fa-clock"></i>
-                <span id="timer">00:00:00</span>
-            </div>
-            <div class="leaderboard-btn" onclick="toggleLeaderboard()">
-                <i class="fas fa-trophy"></i> المتصدرون
-            </div>
+            <div class="timer"><i class="far fa-clock"></i> <span id="timer">00:00:00</span></div>
+            <div class="leaderboard-btn" onclick="toggleLeaderboard()">🏆 LEADERBOARD</div>
         </div>
 
-        <!-- نافذة المتصدرين -->
-        <div id="leaderboard-modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="toggleLeaderboard()" style="position:absolute; top:20px; left:20px; font-size:2em; cursor:pointer;">&times;</span>
-                <h2 style="color:#ffd700; font-size:2.5em; margin-bottom:30px;">🏆 قادة التحدي</h2>
-                <div id="leaderboard-list" style="color:white; font-size:1.3em;"></div>
-            </div>
-        </div>
-
-        <!-- شبكة التحديات -->
+        <!-- CHALLENGES GRID -->
         <div id="challenges-section">
             <div class="challenges-grid" id="challenges-grid"></div>
         </div>
 
-        <!-- شبكة الألغاز (مخفية في البداية) -->
+        <!-- RIDDLES SECTION (HIDDEN) -->
         <div id="riddles-section" style="display: none;">
-            <h2 style="color:#ffd700; font-size:2.5em; text-align:center; margin:40px 0;">🎯 الألغاز النهائية</h2>
+            <div style="border:1px solid #00ff9d; padding:8px; margin:15px 0; text-align:center; font-size:12px;">
+                ⚡ FINAL RIDDLES ⚡
+            </div>
             <div class="riddles-grid" id="riddles-grid"></div>
         </div>
 
-        <!-- نافذة الفائز -->
-        <div id="winner-modal" class="modal winner-modal">
-            <div class="modal-content winner-content">
-                <h1 style="font-size:4em; margin-bottom:20px;">🏆</h1>
-                <h2 id="winner-name" style="font-size:2.5em; margin:20px 0;"></h2>
-                <p style="font-size:1.5em;">أول بطل يكمل 40 مرحلة!</p>
-                <div class="winner-crown">👑</div>
-                <button onclick="closeWinnerModal()" class="btn-primary" style="margin-top:30px;">إغلاق</button>
+        <!-- MODALS -->
+        <div id="leaderboard-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="toggleLeaderboard()">✕</span>
+                <h3 style="margin-bottom:20px; font-size:16px;">🏆 LEADERBOARD</h3>
+                <div id="leaderboard-list"></div>
             </div>
         </div>
 
-        <!-- نافذة التسجيل -->
+        <div id="winner-modal" class="modal winner-modal">
+            <div class="modal-content winner-content">
+                <h2 style="font-size:18px;">🏆 WINNER 🏆</h2>
+                <h3 id="winner-name" style="margin:15px 0; font-size:22px;"></h3>
+                <div class="winner-crown">⚡</div>
+                <button onclick="closeWinnerModal()" class="btn-primary" style="margin-top:15px;">CLOSE</button>
+            </div>
+        </div>
+
         <div id="register-modal" class="modal register-modal">
             <div class="modal-content">
-                <h2 style="color:#ffd700; font-size:2em; text-align:center;">🔐 سجل دخولك</h2>
+                <h3 style="margin-bottom:20px; font-size:16px;">🔐 ACCESS TERMINAL</h3>
                 <form id="register-form" onsubmit="registerUser(event)">
                     <div class="input-group">
-                        <i class="fas fa-user"></i>
-                        <input type="text" id="username" placeholder="اسم المستخدم" required minlength="3" maxlength="20">
+                        <input type="text" id="username" placeholder="USERNAME" required minlength="3" maxlength="20">
                     </div>
                     <div class="input-group">
-                        <i class="fas fa-envelope"></i>
-                        <input type="email" id="email" placeholder="البريد الإلكتروني (اختياري)">
+                        <input type="email" id="email" placeholder="EMAIL (OPTIONAL)">
                     </div>
-                    <button type="submit" class="btn-primary">ابدأ التحدي!</button>
+                    <button type="submit" class="btn-primary">INITIALIZE</button>
                 </form>
             </div>
         </div>
 
-        <!-- إشعار الحقوق -->
-        <div class="anti-cheat-notice">
-            <i class="fas fa-shield-alt"></i> جميع الحقوق محفوظة - إسلام شرطة الأنبو 2026
-        </div>
-
-        <div class="footer">
-            © 2026 إسلام شرطة الأنبو - التحدي الأقوى في فك التشفير
-        </div>
+        <!-- FOOTER & PROTECTION -->
+        <div class="anti-cheat-notice">© ISLAM SHURTA AL-ANBO // CYBER DIVISION 2026</div>
+        <div class="footer">[ SYSTEM: ONLINE ] // [ ENCRYPTIONS: 40 ] // [ STATUS: ACTIVE ]</div>
     </div>
 
-    <!-- كانفاس للاحتفال -->
-    <canvas id="confetti" style="position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:1000001; display:none;"></canvas>
+    <canvas id="confetti" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none;"></canvas>
 
     <script>
-        // منع النسخ بكل الطرق الممكنة
+        // ANTI-COPY - MAXIMUM
         (function() {
-            // منع جميع اختصارات النسخ
-            document.addEventListener('keydown', function(e) {
+            document.addEventListener('keydown', (e) => {
                 if (e.ctrlKey || e.metaKey) {
-                    if (e.key === 'c' || e.key === 'C' || e.key === 'v' || e.key === 'V' || 
-                        e.key === 'x' || e.key === 'X' || e.key === 'a' || e.key === 'A') {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        return false;
-                    }
+                    e.preventDefault();
+                    return false;
                 }
-                // منع F12 و Ctrl+Shift+I
                 if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
                     e.preventDefault();
                     return false;
                 }
-            }, true);
-
-            // منع النقر الأيمن
-            document.addEventListener('contextmenu', function(e) {
+            });
+            document.addEventListener('contextmenu', (e) => e.preventDefault());
+            document.addEventListener('dragstart', (e) => e.preventDefault());
+            document.addEventListener('copy', (e) => {
                 e.preventDefault();
-                e.stopPropagation();
-                return false;
-            }, true);
-
-            // منع السحب
-            document.addEventListener('dragstart', function(e) {
-                e.preventDefault();
-                return false;
-            }, true);
-
-            // منع التحديد
-            document.addEventListener('selectstart', function(e) {
-                e.preventDefault();
-                return false;
-            }, true);
-
-            // منع النسخ من أي مكان
-            document.addEventListener('copy', function(e) {
-                e.preventDefault();
-                e.clipboardData.setData('text/plain', '🚫 ممنوع النسخ - إسلام شرطة الأنبو');
-                return false;
-            }, true);
-
-            // منع القص
-            document.addEventListener('cut', function(e) {
-                e.preventDefault();
-                return false;
-            }, true);
-
-            // منع اللصق
-            document.addEventListener('paste', function(e) {
-                e.preventDefault();
-                return false;
-            }, true);
-
-            // مسح الحافظة باستمرار
-            setInterval(() => {
-                try {
-                    window.clipboardData?.clearData();
-                } catch(e) {}
-            }, 100);
+                e.clipboardData.setData('text/plain', '');
+            });
+            document.addEventListener('cut', (e) => e.preventDefault());
+            document.addEventListener('paste', (e) => e.preventDefault());
+            document.addEventListener('selectstart', (e) => e.preventDefault());
         })();
 
-        // متغيرات سريعة
+        // VARIABLES
         let currentUser = null;
         let completed = 0;
         let startTime = Date.now();
@@ -737,31 +549,29 @@
         let challenges = [];
         let riddles = [];
 
-        // 20 تحديثشفير
         const challengeTypes = [
-            { type: 'base64', name: 'Base64', hint: 'ينتهي بـ =' },
-            { type: 'binary', name: 'Binary', hint: '0 و 1' },
-            { type: 'hex', name: 'Hexadecimal', hint: '0-9 A-F' },
-            { type: 'rot13', name: 'ROT13', hint: 'إزاحة 13 حرف' },
-            { type: 'morse', name: 'Morse Code', hint: 'نقاط وشرط' },
-            { type: 'atbash', name: 'Atbash', hint: 'عكس الأبجدية' },
-            { type: 'ascii', name: 'ASCII', hint: 'أرقام' },
-            { type: 'base32', name: 'Base32', hint: 'A-Z 2-7' },
-            { type: 'rot5', name: 'ROT5', hint: 'للأرقام' },
-            { type: 'reverse', name: 'Reverse', hint: 'اقرأ من اليمين' },
-            { type: 'base58', name: 'Base58', hint: 'بدون 0/O/I/l' },
-            { type: 'rot47', name: 'ROT47', hint: '! إلى ~' },
-            { type: 'bacon', name: 'Bacon Cipher', hint: 'ABABA' },
-            { type: 'railfence', name: 'Rail Fence', hint: 'تعرج' },
-            { type: 'vigenere', name: 'Vigenère', hint: 'مفتاح سر' },
-            { type: 'caesar', name: 'Caesar', hint: 'إزاحة 3' },
-            { type: 'affine', name: 'Affine', hint: 'معادلة خطية' },
-            { type: 'enigma', name: 'Enigma', hint: 'آلة ألمانية' },
-            { type: 'playfair', name: 'Playfair', hint: '5x5 مصفوفة' },
-            { type: 'autokey', name: 'Autokey', hint: 'مفتاح ذاتي' }
-        ];
-
-        // 20 لغز عربي
+    { type: 'base64', name: 'BASE64', text: 'U3BhcnRhbmlh', answer: 'Spartania' },
+    { type: 'binary', name: 'BINARY', text: '01001011 01101001 01101110 01100111', answer: 'King' },
+    { type: 'hex', name: 'HEXADECIMAL', text: '46 6f 78', answer: 'Fox' },
+    { type: 'rot13', name: 'ROT13', text: 'Gur Tbq', answer: 'The Dog' },
+    { type: 'morse', name: 'MORSE', text: '--. .-. .- -. -..', answer: 'GRAND' },
+    { type: 'atbash', name: 'ATBASH', text: 'Zgyzhs', answer: 'Attack' },
+    { type: 'ascii', name: 'ASCII', text: '77 79 78 4b 65 79', answer: 'MonKey' },
+    { type: 'base32', name: 'BASE32', text: 'NBSWY3DP', answer: 'HELLO' },
+    { type: 'rot5', name: 'ROT5', text: '67890', answer: '12345' },
+    { type: 'reverse', name: 'REVERSE', text: '!drowkcaB', answer: 'Backword!' },
+    { type: 'rot47', name: 'ROT47', text: '6EC==', answer: 'Test' },
+    { type: 'bacon', name: 'BACON', text: 'AABAA ABABB ABAAA', answer: 'Cat' },
+    { type: 'railfence', name: 'RAILFENCE', text: 'Hloel Wrd', answer: 'Hello Word' },
+    { type: 'caesar3', name: 'CAESAR+3', text: 'Plwwd', answer: 'Smile' },
+    { type: 'caesar5', name: 'CAESAR+5', text: 'Wtaad', answer: 'Apple' },
+    { type: 'caesar10', name: 'CAESAR+10', text: 'Rovvy', answer: 'Hello' },
+    { type: 'affine', name: 'AFFINE', text: 'Wtaad', answer: 'Apple' },
+    { type: 'xor', name: 'XOR', text: '1719131914', answer: 'Secret' },
+    { type: 'rot18', name: 'ROT18', text: 'Uryyb123', answer: 'Hello123' },
+    { type: 'leet', name: 'LEET', text: 'p@55w0rd', answer: 'password' }
+];
+        // 20 RIDDLES
         const arabicRiddles = [
             { q: 'ما هو الشيء الذي كلما أخذت منه كبر؟', a: 'الحفرة' },
             { q: 'ما الذي يكتب ولا يقرأ؟', a: 'القلم' },
@@ -770,10 +580,10 @@
             { q: 'ما هو البيت الذي ليس له أبواب ولا نوافذ؟', a: 'بيت الشعر' },
             { q: 'ما هو الشيء الذي تراه ولا تستطيع لمسه؟', a: 'السماء' },
             { q: 'ما هو الشيء الذي له أسنان ولا يعض؟', a: 'المشط' },
-            { q: 'ما هو الشيء الذي يطير في النهار ويمشي في الليل؟', a: 'الظل' },
+            { q: 'ما هو الشيء الذي يطير بالنهار ويمشي بالليل؟', a: 'الظل' },
             { q: 'ما هو الشيء الذي يسمع بلا أذن ويتكلم بلا لسان؟', a: 'التلفون' },
-            { q: 'ما هو الشيء الذي كلما مشى خطوة فقد شيئاً من جسمه؟', a: 'الساعة' },
-            { q: 'ما هو الشيء الذي له وجه وليس له لسان ويدل الناس على الزمان؟', a: 'الساعة' },
+            { q: 'ما هو الشيء الذي كلما مشى فقد شيئاً من جسمه؟', a: 'الساعة' },
+            { q: 'ما له وجه وليس له لسان ويدل على الزمان؟', a: 'الساعة' },
             { q: 'ما هو الشيء الذي له عين ولا يرى؟', a: 'الإبرة' },
             { q: 'ما هو الشيء الذي إذا دخل الماء مات؟', a: 'الثلج' },
             { q: 'ما هو الشيء الذي لا يمشي إلا بالضرب؟', a: 'المسمار' },
@@ -782,86 +592,29 @@
             { q: 'ما هو الشيء الذي له جلد وليس بحيوان؟', a: 'الكتاب' },
             { q: 'ما هو الشيء الذي له رأس ولا عينين؟', a: 'الدبوس' },
             { q: 'ما هو الشيء الذي يبكي بلا عيون؟', a: 'الغيم' },
-            { q: 'ما هو الشيء الذي يحملك وتحمله في نفس الوقت؟', a: 'الحذاء' }
+            { q: 'ما هو الشيء الذي يحملك وتحمله؟', a: 'الحذاء' }
         ];
 
-        // تهيئة التحديات
+        // INIT CHALLENGES
         function initChallenges() {
-            challenges = challengeTypes.map((type, index) => ({
+            challenges = challengeTypes.map((ch, index) => ({
+                ...ch,
                 id: index,
-                type: type.type,
-                name: type.name,
-                hint: type.hint,
-                text: generateChallengeText(type.type, index),
-                answer: generateAnswer(type.type, index),
                 solved: false
             }));
         }
 
-        // توليد نصوص التحديات
-        function generateChallengeText(type, index) {
-            const texts = {
-                base64: 'SGVsbG8gUGxheWVyICE=',  // Hello Player !
-                binary: '01001000 01100101 01101100 01101100 01101111',  // Hello
-                hex: '48 65 6c 6c 6f',  // Hello
-                rot13: 'Uryyb Cynlre',  // Hello Player
-                morse: '.... . .-.. .-.. ---',  // Hello
-                atbash: 'Svool',  // Hello
-                ascii: '72 101 108 108 111',  // Hello
-                base32: 'JBSWY3DP',  // Hello
-                rot5: '12345',
-                reverse: '!olleH',
-                base58: '5TWXU',  // Hello
-                rot47: 'wo==6',  // Hello
-                bacon: 'AABBB ABAAA ABABB ABABB ABBBA',  // Hello
-                railfence: 'Hlo el',  // Hello
-                vigenere: 'Rijvs',  // Hello (key: key)
-                caesar: 'Khoor',  // Hello
-                affine: 'Jgnnq',  // Hello
-                enigma: 'Gwkki',  // Hello
-                playfair: 'Gpkak',  // Hello (key: playfair)
-                autokey: 'Rijvs'  // Hello
-            };
-            return texts[type] || 'SGVsbG8=';  // Hello in base64
-        }
-
-        function generateAnswer(type, index) {
-            const answers = {
-                base64: 'hello',
-                binary: 'hello',
-                hex: 'hello',
-                rot13: 'hello',
-                morse: 'hello',
-                atbash: 'hello',
-                ascii: 'hello',
-                base32: 'hello',
-                rot5: '12345',
-                reverse: 'hello!',
-                base58: 'hello',
-                rot47: 'hello',
-                bacon: 'hello',
-                railfence: 'hello',
-                vigenere: 'hello',
-                caesar: 'hello',
-                affine: 'hello',
-                enigma: 'hello',
-                playfair: 'hello',
-                autokey: 'hello'
-            };
-            return answers[type] || 'hello';
-        }
-
-        // تهيئة الألغاز
+        // INIT RIDDLES
         function initRiddles() {
-            riddles = arabicRiddles.map((riddle, index) => ({
+            riddles = arabicRiddles.map((r, index) => ({
                 id: index,
-                question: riddle.q,
-                answer: riddle.a,
+                question: r.q,
+                answer: r.a,
                 solved: false
             }));
         }
 
-        // التسجيل
+        // REGISTER
         function registerUser(event) {
             event.preventDefault();
             const username = document.getElementById('username').value;
@@ -875,79 +628,76 @@
             }
         }
 
-        // بدء المؤقت
+        // TIMER
         function startTimer() {
             timerInterval = setInterval(() => {
                 const elapsed = Math.floor((Date.now() - startTime) / 1000);
-                const hours = Math.floor(elapsed / 3600);
-                const minutes = Math.floor((elapsed % 3600) / 60);
-                const seconds = elapsed % 60;
+                const h = Math.floor(elapsed / 3600);
+                const m = Math.floor((elapsed % 3600) / 60);
+                const s = elapsed % 60;
                 document.getElementById('timer').innerHTML = 
-                    `${hours.toString().padStart(2,'0')}:${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
+                    `${h.toString().padStart(2,'0')}:${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
             }, 1000);
         }
 
-        // تحميل التحديات
+        // LOAD CHALLENGES
         function loadChallenges() {
             const grid = document.getElementById('challenges-grid');
             grid.innerHTML = '';
             
-            challenges.forEach((ch, index) => {
-                const card = document.createElement('div');
-                card.className = 'challenge-card';
-                card.innerHTML = `
-                    <div class="card-header">
-                        <span class="card-number">${index + 1}</span>
-                        <span class="card-status ${ch.solved ? 'completed' : ''}">
-                            <i class="fas ${ch.solved ? 'fa-check-circle' : 'fa-lock'}"></i>
-                        </span>
+            challenges.forEach((ch, i) => {
+                grid.innerHTML += `
+                    <div class="challenge-card">
+                        <div class="card-header">
+                            <span class="card-number">#${(i+1).toString().padStart(2,'0')}</span>
+                            <span class="card-status ${ch.solved ? 'completed' : ''}">
+                                ${ch.solved ? '✓' : '○'}
+                            </span>
+                        </div>
+                        <div class="card-title">${ch.name}</div>
+                        <div class="challenge-text">${ch.text}</div>
+                        <input type="text" class="challenge-input" id="challenge-${i}" ${ch.solved ? 'disabled' : ''} placeholder=">_">
+                        <button class="challenge-btn" onclick="checkChallenge(${i})" ${ch.solved ? 'disabled' : ''}>
+                            ${ch.solved ? 'DONE' : 'DECRYPT'}
+                        </button>
+                        <button class="hint-btn" onclick="alert('HINT: ${ch.text.length} chars')">
+                            [?]
+                        </button>
                     </div>
-                    <div class="card-title">🔐 ${ch.name}</div>
-                    <div class="challenge-text">${ch.text}</div>
-                    <input type="text" class="challenge-input" id="challenge-${index}" ${ch.solved ? 'disabled' : ''} placeholder="الحل...">
-                    <button class="challenge-btn" onclick="checkChallenge(${index})" ${ch.solved ? 'disabled' : ''}>
-                        ${ch.solved ? 'تم ✓' : 'تحقق'}
-                    </button>
-                    <button class="hint-btn" onclick="alert('💡 ${ch.hint}')">
-                        <i class="fas fa-lightbulb"></i> تلميح
-                    </button>
                 `;
-                grid.appendChild(card);
             });
         }
 
-        // تحميل الألغاز
+        // LOAD RIDDLES
         function loadRiddles() {
             const grid = document.getElementById('riddles-grid');
             grid.innerHTML = '';
             
-            riddles.forEach((rid, index) => {
-                const card = document.createElement('div');
-                card.className = 'riddle-card';
-                card.innerHTML = `
-                    <div class="card-header">
-                        <span class="card-number">${index + 21}</span>
-                        <span class="card-status ${rid.solved ? 'completed' : ''}">
-                            <i class="fas ${rid.solved ? 'fa-check-circle' : 'fa-question'}"></i>
-                        </span>
+            riddles.forEach((r, i) => {
+                grid.innerHTML += `
+                    <div class="riddle-card">
+                        <div class="card-header">
+                            <span class="card-number">#${(i+21).toString().padStart(2,'0')}</span>
+                            <span class="card-status ${r.solved ? 'completed' : ''}">
+                                ${r.solved ? '✓' : '?'}
+                            </span>
+                        </div>
+                        <div class="riddle-question">${r.question}</div>
+                        <input type="text" class="riddle-input" id="riddle-${i}" ${r.solved ? 'disabled' : ''} placeholder="...">
+                        <button class="riddle-btn" onclick="checkRiddle(${i})" ${r.solved ? 'disabled' : ''}>
+                            ${r.solved ? 'DONE' : 'ANSWER'}
+                        </button>
                     </div>
-                    <div class="card-title">❓ لغز ${index + 1}</div>
-                    <div class="riddle-question" style="font-size:1.3em; margin:20px 0; min-height:80px;">${rid.question}</div>
-                    <input type="text" class="riddle-input" id="riddle-${index}" ${rid.solved ? 'disabled' : ''} placeholder="الإجابة...">
-                    <button class="riddle-btn" onclick="checkRiddle(${index})" ${rid.solved ? 'disabled' : ''}>
-                        ${rid.solved ? 'تم ✓' : 'إجابة'}
-                    </button>
                 `;
-                grid.appendChild(card);
             });
         }
 
-        // التحقق من التحدي
+        // CHECK CHALLENGE
         function checkChallenge(index) {
             const input = document.getElementById(`challenge-${index}`);
             const answer = input.value.trim().toLowerCase();
             
-            if (answer === challenges[index].answer.toLowerCase()) {
+            if (answer === challenges[index].answer) {
                 challenges[index].solved = true;
                 completed++;
                 updateProgress();
@@ -956,19 +706,18 @@
                 if (completed === 20) {
                     document.getElementById('riddles-section').style.display = 'block';
                     loadRiddles();
-                    alert('🎉 مبروك! أكملت كل التشفير! الآن الألغاز');
                 }
                 
-                celebrate();
+                if (completed === 40) declareWinner();
             } else {
-                alert('❌ خطأ! حاول مرة أخرى');
+                alert('ACCESS DENIED');
             }
         }
 
-        // التحقق من اللغز
+        // CHECK RIDDLE
         function checkRiddle(index) {
             const input = document.getElementById(`riddle-${index}`);
-            const answer = input.value.trim().replace(/[^\u0600-\u06FF]/g, '');
+            const answer = input.value.trim();
             
             if (answer === riddles[index].answer) {
                 riddles[index].solved = true;
@@ -976,17 +725,13 @@
                 updateProgress();
                 loadRiddles();
                 
-                if (completed === 40) {
-                    declareWinner();
-                }
-                
-                celebrate();
+                if (completed === 40) declareWinner();
             } else {
-                alert('❌ إجابة خاطئة');
+                alert('WRONG');
             }
         }
 
-        // تحديث التقدم
+        // UPDATE PROGRESS
         function updateProgress() {
             const percent = (completed / 40) * 100;
             document.getElementById('progress-fill').style.width = percent + '%';
@@ -994,71 +739,25 @@
             document.getElementById('progress-percent').innerHTML = Math.round(percent) + '%';
         }
 
-        // إعلان الفائز
+        // WINNER
         function declareWinner() {
             clearInterval(timerInterval);
             document.getElementById('winner-name').innerHTML = currentUser.name;
             document.getElementById('winner-modal').style.display = 'flex';
-            startConfetti();
             saveWinner();
         }
 
-        // تأثير احتفالي سريع
-        function celebrate() {
-            const btn = event.target;
-            btn.style.transform = 'scale(0.9)';
-            setTimeout(() => btn.style.transform = '', 100);
-        }
-
-        // كونفيتي
-        function startConfetti() {
-            const canvas = document.getElementById('confetti');
-            canvas.style.display = 'block';
-            const ctx = canvas.getContext('2d');
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            
-            const particles = [];
-            for(let i = 0; i < 150; i++) {
-                particles.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    vx: Math.random() * 6 - 3,
-                    vy: Math.random() * 3 + 2,
-                    color: `hsl(${Math.random() * 360}, 100%, 50%)`,
-                    size: Math.random() * 5 + 2
-                });
-            }
-            
-            function animate() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                particles.forEach(p => {
-                    p.x += p.vx;
-                    p.y += p.vy;
-                    if(p.y > canvas.height) {
-                        p.y = 0;
-                        p.x = Math.random() * canvas.width;
-                    }
-                    ctx.fillStyle = p.color;
-                    ctx.fillRect(p.x, p.y, p.size, p.size);
-                });
-                requestAnimationFrame(animate);
-            }
-            animate();
-        }
-
-        // حفظ الفائز
+        // SAVE WINNER
         function saveWinner() {
             let winners = JSON.parse(localStorage.getItem('winners') || '[]');
             winners.push({
                 name: currentUser.name,
-                time: Math.floor((Date.now() - startTime) / 1000),
-                date: new Date().toISOString()
+                time: Math.floor((Date.now() - startTime) / 1000)
             });
             localStorage.setItem('winners', JSON.stringify(winners));
         }
 
-        // تبديل المتصدرين
+        // LEADERBOARD
         function toggleLeaderboard() {
             const modal = document.getElementById('leaderboard-modal');
             const list = document.getElementById('leaderboard-list');
@@ -1066,10 +765,8 @@
             
             list.innerHTML = winners.length ? 
                 winners.sort((a,b) => a.time - b.time).slice(0,10).map((w,i) => 
-                    `<div style="padding:10px; margin:5px; background:rgba(255,215,0,0.1); border-radius:10px;">
-                        ${i+1}. ${w.name} - ${Math.floor(w.time/60)}:${(w.time%60).toString().padStart(2,'0')}
-                    </div>`
-                ).join('') : '<div style="color:#aaa;">لا فائزين بعد</div>';
+                    `<div>${i+1}. ${w.name} - ${Math.floor(w.time/60)}:${(w.time%60).toString().padStart(2,'0')}</div>`
+                ).join('') : '<div style="opacity:0.5;">NO WINNERS</div>';
             
             modal.style.display = 'flex';
         }
@@ -1078,8 +775,8 @@
             document.getElementById('winner-modal').style.display = 'none';
         }
 
-        // تشغيل مباشر
-        window.onload = function() {
+        // INIT
+        window.onload = () => {
             document.getElementById('winner-modal').style.display = 'none';
         };
     </script>
